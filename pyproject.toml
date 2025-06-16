@@ -1,17 +1,22 @@
-[project]
+[tool.poetry]
 name = "weather-forecast-cli"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "awakra",email = "lucasadls0@gmail.com"}
-]
+description = "A simple CLI to get weather forecasts from an API."
+authors = ["awakra <lucasadls0@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "requests (>=2.32.4,<3.0.0)"
-]
+packages = [{include = "weather_forecast_cli"}]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
+requests = ">=2.32.4,<3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+pytest-cov = "^5.0"
+
+[tool.poetry.scripts]
+weather-cli = "weather_forecast_cli.main:app"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
