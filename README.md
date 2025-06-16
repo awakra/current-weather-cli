@@ -3,7 +3,6 @@
 ![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)
-![License](https://img.shields.io/badge/license-MIT-orange.svg)
 
 A simple, modern command-line tool to fetch the current weather for a given city, built with Python, Typer, and Poetry.
 
