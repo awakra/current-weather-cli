@@ -1,7 +1,7 @@
 import os
 import typer
 from dotenv import load_dotenv
-from weather_forecast_cli.core import get_weather_data
+from current_weather_cli.core import get_weather_data
 
 
 load_dotenv()

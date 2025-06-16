@@ -1,12 +1,12 @@
 import unittest
 import requests
 from unittest.mock import patch, Mock
-from weather_forecast_cli.core import get_weather_data
+from current_weather_cli.core import get_weather_data
 
 class TestCore(unittest.TestCase):
     """Test suite for the core weather fetching logic."""
 
-    @patch('weather_forecast_cli.core.requests.get')
+    @patch('current_weather_cli.core.requests.get')
     def test_get_weather_data_success(self, mock_get):
         """
         Tests the successful retrieval of weather data for a city.
@@ -30,7 +30,7 @@ class TestCore(unittest.TestCase):
         self.assertEqual(weather_data['weather'][0]['description'], 'clear sky')
         self.assertEqual(weather_data['main']['temp'], 282.55)
         
-    @patch('weather_forecast_cli.core.requests.get')
+    @patch('current_weather_cli.core.requests.get')
     def test_get_weather_data_failure(self, mock_get):
         """
         Tests the function's behavior when the API call fails.
@@ -48,7 +48,7 @@ class TestCore(unittest.TestCase):
         # by returning None, as designed.
         self.assertIsNone(weather_data)
         
-    @patch('weather_forecast_cli.core.requests.get')
+    @patch('current_weather_cli.core.requests.get')
     def test_get_weather_data_http_error(self, mock_get):
         """
         Tests the function's behavior for a 404 HTTP error (e.g., city not found).
