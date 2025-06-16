@@ -9,6 +9,8 @@ packages = [{include = "weather_forecast_cli"}]
 [tool.poetry.dependencies]
 python = ">=3.12"
 requests = ">=2.32.4,<3.0.0"
+typer = "^0.16.0"
+python-dotenv = "^1.1.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0"
